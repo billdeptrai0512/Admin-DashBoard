@@ -4,77 +4,205 @@
     padding: 0;
 }
 
+body {
+    background: linear-gradient(90deg, rgba(172,119,17,1) 0%, rgba(219,112,10,0.9612219887955182) 100%);
+}
+
 .container {
-    width: 100vw;
-    height: 100vh;
+    background: linear-gradient(90deg, rgba(245,205,128,1) 0%, #f6d5b5 100%);
+    border-radius: 3rem;
+    margin: 0.5rem;
+    width: 99vw;
+    height: 98vh;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 15% 85%;
     grid-template-rows: 1fr 4fr;
 }
 
 .header {
     grid-column: 2 / 4;
-    background-color: red;
     display: grid;
     grid-template-columns: 3fr 1fr;
     text-align: center;
 }
 
 .header .search {
-    align-self: center;
+    display: flex;
+    align-self: center; 
+    background-color: white;
+    width: 40rem;
+    height: 3rem;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.header .search .input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding-left: 10px;
+    font-size: 1.25rem;
+    background: transparent;
 }
 
 .header .profile {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
+.button {
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+}
+
+.header .profile img {
+    width: 80px;
+    margin-left: 20px;
+}
+.header .profile .smile{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .back-color { 
-    background-color: orange;
     grid-column: 1;
     grid-row: 1 / 4;
+    height: 100vh;
 }
 .side-bar {
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    height: 60%;
+    grid-template-rows: 1fr 2fr;
+    height: 82%;
+    text-align: center;
+    align-items: center;
+}
+
+.side-bar .logo {
+    padding: 2em;
+
+}
+
+.task {
+    padding: 5em 3em;
+}
+
+.one {
+    display: flex;
+    padding: 1rem;
+    justify-content:flex-start;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+}
+
+.one p {
+    padding-left: 30px;
+}
+
+.side-bar img {
+    width: 30px;
 }
 
 .content {
-    background-color: blue;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
+.content .left-side > h3 {
+    padding-left: 1.2rem;
+}
+
 .project {
-    background-color: purple;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    
 }
 
 .project .single {
+    width: 17.5em;
+    height: 17.5em;
+    border-radius: 25px;
     background-color: white;
-    padding: 3em 1em;
+    padding: 2em 1em;
     margin: 1em;
+    display: flex;
+    flex-direction: column;
 }
+
+.project .single > p {
+    padding-top: 10px
+}
+
+.project .single .reaction {
+    display: flex;
+    justify-content: end;
+    padding-top: 2.5rem;
+}
+
+.project .single .reaction > img {
+    width: 50px;
+    padding: 10px;
+    text-align: end;
+}
+
 
 .right-side {
-    background-color: brown;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr ;
 }
 
-.announcements .news{
-    background-color: white;
-
+.announcements{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    width: 90%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
 
-.trending .avatar {
-    background-color: white;
+.announcements .border,
+.trending .border {
+    width: 88%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: lightgray;
+    display: block;
 }
+
+.announcements .each,
+.trending .each {
+    padding: 25px;
+}
+
+.right-side p {
+    font-size: 12px;
+    padding: 5px;
+}
+
+.trending {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    width: 90%;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
 
 
